@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    response = requests.get("http://<VM_INTERNAL_IP>:5000/data")  # Replace later
+    response = requests.get("http://10.160.0.2:5000/data")  # Replace later
     return f"Frontend says: {response.text}"
 
 if __name__ == "__main__":
