@@ -16,5 +16,5 @@ steps:
       - '--vpc-connector=my-vpc-connector'
       - '--allow-unauthenticated'
 
-# THIS IS THE ESSENTIAL PART. It must be at the same indentation level as 'steps:'
-logsBucket: 'gs://sohitmishra007-cloud-build-logs'
+options:
+  logging: CLOUD_LOGGING_ONLY
