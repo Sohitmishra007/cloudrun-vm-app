@@ -1,7 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    # CHANGE THIS LINE:
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/frontend-app', 'frontend'] # <--- Changed '.' to 'frontend'
+    # THIS LINE MUST BE CHANGED TO 'frontend'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/frontend-app', 'frontend']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/frontend-app']
@@ -18,4 +18,4 @@ steps:
       - '--allow-unauthenticated'
 
 options:
-  logging: CLOUD_LOGGING_ONLY # This is fine for now, addressing the "no logs" issue
+  logging: CLOUD_LOGGING_ONLY
